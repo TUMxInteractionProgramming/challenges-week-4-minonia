@@ -86,6 +86,9 @@ h1#left-app-bar img {
     bottom: 0;
 }
 
+/* icon */
+
+
 h1 a {
     /* #6 #channels fix the #link color in app bar*/
     color: white;
@@ -95,6 +98,9 @@ h1 #channel-star {
     /* #6 #liking #filled  */
     position:absolute;
     right: 16px;
+
+    bottom: 20px;*/
+
 }
 
 /* CHANNELS LIST */
@@ -138,6 +144,17 @@ li.selected {
     border-left: 4px solid #3F51B5;
 }
 
+/* icons */
+i {
+  font-size: 24px;
+}
+
+/*icon star h1 */
+#chat i {
+
+
+}
+
 /* TAB BAR */
 
 /* #5 #smileys #lazy: we can reuse most of the tab-bar's styles for the chat-bar */
@@ -172,7 +189,7 @@ li.selected {
     border-bottom: 4px solid #3F51B5;
 }
 
-#tab-bar button img {
+#tab-bar button i {
     display: block;
     margin: 0 auto 4px auto;
 }
@@ -184,6 +201,15 @@ li.selected {
     width: auto;
     flex-grow: 0;
 }
+
+/* input field */
+#input {
+  border: 0px none;
+  font-size: medium;
+  flex-grow: 0.75;
+
+}
+
 
 #emojis {
     /* #5 #smileys #emojis menu */
@@ -210,6 +236,14 @@ li.selected {
     /* #6 #hide the #smile menu */
     display: none;
 }
+
+#submit {
+  display: block;
+  position: absolute;
+  right: 16px;
+  font-size: 24px;
+}
+
 
 /* MESSAGES */
 
