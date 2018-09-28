@@ -5,7 +5,7 @@ var currentLocation = {"longitude": "48.271339", "latitude": "16.340475", "what3
 
 /* constructor for messages */
 function Message (text) {
-  this.createdBy = Number(currentLocation.what3words);
+  this.createdBy = currentLocation.what3words;
   this.latitude = Number(currentLocation.latitude);
   this.longitude = Number(currentLocation.longitude);
   this.createdOn = new Date();
