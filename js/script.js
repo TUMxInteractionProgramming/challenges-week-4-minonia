@@ -5,7 +5,7 @@ var currentLocation = {"longitude": "48.271339", "latitude": "16.340475", "what3
 
 /* constructor for messages */
 function Message (text) {
-  this.createdBy = (currentLocation.what3words);
+  this.createdBy = Number(currentLocation.what3words);
   this.latitude = Number(currentLocation.latitude);
   this.longitude = Number(currentLocation.longitude);
   this.createdOn = new Date();
@@ -112,10 +112,7 @@ function star() {
 //      $('#channel-star').css("color", "blue");
     currentChannel.starred = !currentChannel.starred;
     $('#channels li:contains(' + currentChannel.name + ') i:first-child').removeClass("fas fa-star  far fa-star");
-    currentChannel.starred ?  $('#channels li:contains(' + currentChannel.name + ') i:first-child').addClass("far fa-star") : $('#channels li:contains(' + currentChannel.name + ') i:first-child').addClass("fas fa-star");
-    console.log(currentChannel);
-    console.log('Hi');
-
+    currentChannel.starred ?  $('#channels li:contains(' + currentChannel.name + ') i:first-child').addClass("fas fa-star") : $('#channels li:contains(' + currentChannel.name + ') i:first-child').addClass("far fa-star");
 }
 
 /**
