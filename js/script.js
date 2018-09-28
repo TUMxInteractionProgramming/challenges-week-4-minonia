@@ -108,8 +108,8 @@ function switchChannel(channelName) {
 
 /* #6 #liking a channel on #click */
 function star() {
-    $('#channel-star').toggleClass("fas fa-star  far fa-star");
     currentChannel.starred = !currentChannel.starred;
+    $('#channel-star').toggleClass("fas fa-star  far fa-star");
     $('#channels li:contains(' + currentChannel.name + ') i:first-child').removeClass("fas fa-star  far fa-star");
     currentChannel.starred ?  $('#channels li:contains(' + currentChannel.name + ') i:first-child').addClass("fas fa-star") : $('#channels li:contains(' + currentChannel.name + ') i:first-child').addClass("far fa-star");
 }
