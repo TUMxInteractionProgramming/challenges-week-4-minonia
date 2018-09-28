@@ -5,9 +5,9 @@ var currentLocation = {"longitude": "48.271339", "latitude": "16.340475", "what3
 
 /* constructor for messages */
 function Message (text) {
-  this.createdBy = currentLocation.what3words;
-  this.latitude = currentLocation.latitude;
-  this.longitude = currentLocation.longitude;
+  this.createdBy = (currentLocation.what3words);
+  this.latitude = Number(currentLocation.latitude);
+  this.longitude = Number(currentLocation.longitude);
   this.createdOn = new Date();
   /* why minus ? works*/
   this.expiresOn =  new Date (new Date().getTime() + 15 * 60000);
@@ -51,6 +51,7 @@ function createMessageElement(messageObject) {
 }
 
 /* create list items for channels */
+/* loop should have been better*/
 function listChannels() {
   var chYummy = createChannelElement(yummy)
   $(chYummy).appendTo($('ul'));
@@ -68,7 +69,7 @@ function listChannels() {
 function createChannelElement(channelObject) {
   var channelStringName = channelObject.name.slice(1, 2).toLowerCase() + channelObject.name.slice(2, )
   var funkt = "switchChannel("+ channelStringName +")";
-  var starFill = channelObject.starred ?  '<i class="fas fa-star"></i>': '<i class="far fa-star"></i>';
+  var starFill = channelObject.starred ?  '<i class="channelStar fas fa-star" ></i>': '<i class="far fa-star channelStar"></i>';
   console.log(starFill);
   var listChan = '<li onclick =' + funkt +" "+'>'+
       channelObject.name +
@@ -81,8 +82,9 @@ function createChannelElement(channelObject) {
 
 function switchChannel(channelName) {
     //Log the channel switch
-    console.log("Tuning in to channel", channelName.name);
+    console.log("Tuning in to channel", channelName);
     currentChannel = channelName;
+
     //Write the new channel to the right app bar
     document.getElementById('channel-name').innerHTML = channelName.name;
     //var newLink = "http//:w3w.co/" + channelName.createdBy;
@@ -90,7 +92,8 @@ function switchChannel(channelName) {
     document.getElementById('channel-location').innerHTML = 'by <a href="http://w3w.co/upgrading.never.helps" target="_blank"><strong>'+channelName.createdBy +'</strong></a>';
     /* #6 #liking channels on #click */
     $('#channel-star').removeClass('fas fa-star far fa-star');
-    channelName.starred? $('#channel-star').addClass('far fa-star') : $('#channel-star').addClass('fas fa-star');
+    channelName.starred? $('#channel-star').addClass('fas fa-star') : $('#channel-star').addClass('far fa-star');
+
     // $('#channel-star').removeClass("fas fa-star");
     // $('#channel-star').addClass("far fa-star");
 
@@ -99,6 +102,9 @@ function switchChannel(channelName) {
     $('#channels li').removeClass('selected');
     $('#channels li:contains(' + channelName.name + ')').addClass('selected');
 }
+
+// switch the star in channel
+
 
 /* #6 #liking a channel on #click */
 function star() {

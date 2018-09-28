@@ -4,7 +4,8 @@ var yummy = {
   "createdOn": new Date("2016-06-20T13:37"),
   "createdBy": "minus.plus.yummy",
   "starred": false,
-  "expiresOn": 15
+  "expiresIn": 15,
+  "messageCount" : 999
 };
 
 var sevenContinents = {
@@ -12,7 +13,8 @@ var sevenContinents = {
   "createdOn": new Date("2016-04-01"),
   "createdBy": "cheese.yard.applies",
   "starred": true,
-  "expiresOn": 15
+  "expiresIn": 15,
+  "messageCount" : 999
 };
 
 var killerApp = {
@@ -20,7 +22,8 @@ var killerApp = {
   "createdOn": new Date("2016-04-01"),
   "createdBy": "minus.plus.killerApp",
   "starred": true,
-  "expiresOn": 15
+  "expiresIn": 15,
+  "messageCount" : 999
 };
 
 var  firstPersonOnMars = {
@@ -28,7 +31,8 @@ var  firstPersonOnMars = {
   "createdOn": new Date("2016-04-01"),
   "createdBy": "minus.plus.firstPersonOnMars ",
   "starred": false,
-  "expiresOn": 15
+  "expiresIn": 15,
+  "messageCount" : 999
 };
 
 var octoberfest= {
@@ -36,5 +40,6 @@ var octoberfest= {
   "createdOn": new Date("2016-04-01"),
   "createdBy": "minus.plus.octoberfest ",
   "starred": true,
-  "expiresOn": 15
+  "expiresIn": 15,
+  "messageCount" : 999
 };
